@@ -12,12 +12,22 @@
   @import "dark";
 {%- endif -%}
 
-/* 포스트 목록에서 각 글 사이에 구분선 추가 */
-.post-list > li {
-  border-bottom: 1px solid #444; /* 구분선 색상 */
-  margin-bottom: 2rem;          /* 글 사이 여백 */
-  padding-bottom: 2rem;         /* 구분선 위쪽 여백 */
+/* 홈/목록 페이지: 글 사이 구분선 */
+.post-list > li,
+.post-container > article,
+.posts > .post-item {
+  border-bottom: 1px solid #343434;  /* 선 색상 */
+  padding-bottom: 1.75rem;           /* 선 위 여백 */
+  margin-bottom: 1.75rem;            /* 글 사이 간격 */
 }
+
+/* 마지막 글은 선 제거 */
+.post-list > li:last-child,
+.post-container > article:last-of-type,
+.posts > .post-item:last-child {
+  border-bottom: none;
+}
+
 
 /* 전체 글꼴 변경 */
 body {
