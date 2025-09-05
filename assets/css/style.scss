@@ -12,14 +12,32 @@
   @import "dark";
 {%- endif -%}
 
-/* 홈/목록 페이지: 글 사이 구분선 */
-.post-list > li,
-.post-container > article,
-.posts > .post-item {
-  border-bottom: 1px solid #343434;  /* 선 색상 */
-  padding-bottom: 1.75rem;           /* 선 위 여백 */
-  margin-bottom: 1.75rem;            /* 글 사이 간격 */
+/* 글 목록 구분선 (라이트/다크 모두 자연스럽게) */
+:root { --post-sep: #e5e5e5; }                 /* light */
+@media (prefers-color-scheme: dark) {
+  :root { --post-sep: #2f2f2f; }               /* dark */
 }
+
+/* 가능한 목록 래퍼들 전부 커버 */
+.post-list > li,
+.posts > .post-item,
+.post-container > article,
+.post-preview,
+.post-card {
+  border-bottom: 1px solid var(--post-sep);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 마지막 아이템은 선 제거 */
+.post-list > li:last-child,
+.posts > .post-item:last-child,
+.post-container > article:last-of-type,
+.post-preview:last-child,
+.post-card:last-child {
+  border-bottom: none;
+}
+
 
 /* 마지막 글은 선 제거 */
 .post-list > li:last-child,
@@ -31,13 +49,14 @@
 
 /* 전체 글꼴 변경 */
 body {
-  font-family: 'Noto Sans KR', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-               Helvetica, Arial, sans-serif !important;
+  font-family: 'Noto Sans KR','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif !important;
   font-size: 16px;
-  line-height: 1.7; /* 가독성 좋게 */
-  color: #f2f2f2;   /* 다크 모드라면 밝은 회색 */
-  background-color: #111; /* 배경색 어두운 톤 */
+  line-height: 1.7;
 }
+
+
+
+
 
 /* 포스트 제목은 조금 두껍게 */
 h1, h2, h3, h4, h5, h6 {
