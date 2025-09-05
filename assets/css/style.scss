@@ -11,3 +11,27 @@
   @import "toggle";
   @import "dark";
 {%- endif -%}
+
+/* 포스트 목록에서 각 글 사이에 구분선 추가 */
+.post-list > li {
+  border-bottom: 1px solid #444; /* 구분선 색상 */
+  margin-bottom: 2rem;          /* 글 사이 여백 */
+  padding-bottom: 2rem;         /* 구분선 위쪽 여백 */
+}
+
+/* 전체 글꼴 변경 */
+body {
+  font-family: 'Noto Sans KR', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+               Helvetica, Arial, sans-serif !important;
+  font-size: 16px;
+  line-height: 1.7; /* 가독성 좋게 */
+  color: #f2f2f2;   /* 다크 모드라면 밝은 회색 */
+  background-color: #111; /* 배경색 어두운 톤 */
+}
+
+/* 포스트 제목은 조금 두껍게 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;
+  font-weight: 700;
+  line-height: 1.4;
+}
