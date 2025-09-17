@@ -1,5 +1,5 @@
-title: zergling
-author: zergling
+title: just a person 
+author: just a person
 email: kjs36202@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   수학과 다니는 평범한 보안쟁이
@@ -10,7 +10,7 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: zergling
+  name: just a person
   tagline: hacker
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
